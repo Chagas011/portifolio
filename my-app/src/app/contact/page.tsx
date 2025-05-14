@@ -20,28 +20,34 @@ export default function Contact() {
             <Link
               href="https://wa.me/5511985001474"
               target="_blank"
-              className="flex flex-row gap-2"
+              className="flex flex-row gap-1"
             >
               <IconBrandWhatsapp className="text-green-500" />
               <span>(11) 98500-1474</span>
             </Link>
           </div>
 
-          <div className="flex items-center gap-2 cursor-pointer">
+          <div className="flex items-center gap-1 cursor-pointer">
             <IconMail className="text-yellow-200" />
             <span>washington.chagas.9@hotmail.com</span>
           </div>
 
           <div className="flex items-center gap-2 cursor-pointer">
-            <IconBrandGithub />
-            <span>GitHub</span>
+            <Link
+              href="https://github.com/Chagas011"
+              target="_blank"
+              className="flex flex-row gap-1"
+            >
+              <IconBrandGithub />
+              <span>GitHub</span>
+            </Link>
           </div>
 
           <div className="flex items-center gap-2 cursor-pointer">
             <Link
               href="https://www.linkedin.com/in/washington-chagas"
               target="_blank"
-              className="flex flex-row gap-2"
+              className="flex flex-row gap-1"
             >
               <IconBrandLinkedin className="text-blue-500" />
               <span>Linkedin</span>
