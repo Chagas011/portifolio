@@ -3,6 +3,12 @@ import Link from "next/link";
 import { useState } from "react";
 import MenuIcon from "../../assets/menu (1).svg";
 import Image from "next/image";
+import { Poppins } from "next/font/google";
+
+const poppinsFont = Poppins({
+  subsets: ["latin"],
+  weight: "400",
+});
 export default function Nav() {
   const [toggle, setToggle] = useState(false);
 
@@ -12,10 +18,10 @@ export default function Nav() {
   return (
     <nav className="fixed left-0 top-0 z-50 flex h-20 w-full items-center px-4 bg-zinc-900 rounded-xl">
       <div className="flex flex-col">
-        <span className="hover:scale-105 transition-all">
+        <span className="hover:scale-105 transition-all ease-in-out duration-300">
           <Link
             href="/"
-            className="text-2xl font-extrabold text-green-400  p-4"
+            className={`text-2xl font-extrabold text-green-400 p-4 ${poppinsFont.className}`}
           >
             Washington Chagas Santos
           </Link>
@@ -32,12 +38,12 @@ export default function Nav() {
           alt="menuIcon"
           width={35}
           height={35}
-          className="dark:invert hover:scale-110"
+          className="dark:invert hover:scale-110 transition-all ease-in-out duration-300"
         />
       </button>
 
       {toggle && (
-        <div className="absolute right-4 top-[60px] w-44 divide-y divide-gray-100 rounded-lg justify-center text-center bg-green-950">
+        <div className="absolute right-4 top-[60px] w-44 divide-y divide-gray-100 rounded-lg justify-center text-center bg-zinc-800 md:hidden">
           <ul className="py-2 text-sm text-white">
             <li className="p-2">
               <Link
@@ -71,7 +77,10 @@ export default function Nav() {
 
       <ul className="ml-auto flex flex-row gap-4 py-2 max-md:hidden">
         <li>
-          <Link href="/" className="text-white text-xl hover:text-green-400">
+          <Link
+            href="/"
+            className="text-white text-xl hover:text-green-700 hover:underline decoration-4 underline-offset-16"
+          >
             Home
           </Link>
         </li>
@@ -79,7 +88,7 @@ export default function Nav() {
         <li>
           <Link
             href="/projects"
-            className="text-white text-xl hover:text-green-400"
+            className="text-white text-xl hover:text-green-700 hover:underline decoration-4 underline-offset-16"
           >
             Projetos
           </Link>
@@ -88,7 +97,7 @@ export default function Nav() {
         <li>
           <Link
             href="/contact"
-            className="text-white text-xl hover:text-green-400"
+            className="text-white text-xl hover:text-green-700 hover:underline decoration-4 underline-offset-16"
           >
             Contato
           </Link>

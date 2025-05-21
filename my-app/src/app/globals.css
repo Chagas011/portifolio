@@ -19,6 +19,24 @@
   }
 }
 
+@keyframes gradientLoop {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-animated {
+  background: linear-gradient(270deg, #4ade80, #22c55e, #14532d);
+  background-size: 600% 600%;
+  animation: gradientLoop 8s ease infinite;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

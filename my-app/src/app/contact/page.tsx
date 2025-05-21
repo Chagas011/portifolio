@@ -6,6 +6,13 @@ import {
   IconBrandGithub,
   IconBrandLinkedin,
 } from "@tabler/icons-react";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Washington Chagas Santos | Contato",
+};
+
 export default function Contact() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -15,7 +22,7 @@ export default function Contact() {
         <div>
           <h1 className="text-2xl text-green-400 p-10">Entre em contato</h1>
         </div>
-        <div className="grid grid-cols-2 md:flex md:flex-row gap-5">
+        <div className="grid grid-cols-1 md:flex md:flex-row gap-2 md:gap-5 px-10 justify-items-center">
           <div className="flex items-center gap-2 cursor-pointer">
             <Link
               href="https://wa.me/5511985001474"
