@@ -1,0 +1,49 @@
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { projects } from "../projects";
+export function CardProjects() {
+  return projects.map((project, index) => (
+    <Card className="p-2 h-[600px] flex flex-col justify-between" key={index}>
+      <CardHeader>
+        <CardTitle className="text-center p-3 font-semibold">
+          {project.name}
+        </CardTitle>
+      </CardHeader>
+
+      <CardContent className="p-0 flex-grow">
+        <div className="relative w-full h-[300px] rounded-2xl overflow-hidden">
+          <Link href={project.link} target="_blank">
+            <Image
+              src={project.imageUrl}
+              alt={project.name}
+              fill
+              className="object-cover"
+            />
+          </Link>
+        </div>
+        <CardDescription className="mt-4 text-justify text-sm px-2">
+          {project.description}
+        </CardDescription>
+      </CardContent>
+
+      <CardFooter className="ml-auto">
+        <div className="">
+          <Button asChild className="">
+            <Link href={project.link} target="_blank">
+              Visitar projeto
+            </Link>
+          </Button>
+        </div>
+      </CardFooter>
+    </Card>
+  ));
+}
