@@ -44,6 +44,12 @@ export function Main() {
             </div>
             <div className="flex gap-1 items-center justify-center mt-3">
               <h3 className="text-sm font-semibold lg:text-xl text-zinc-300">
+                Formação React - JStack{" "}
+              </h3>
+              <Check className="text-green-400" />
+            </div>
+            <div className="flex gap-1 items-center justify-center mt-3">
+              <h3 className="text-sm font-semibold lg:text-xl text-zinc-300">
                 Formação JavaScript e TypeScript - JStack{" "}
               </h3>
               <Check className="text-green-400" />

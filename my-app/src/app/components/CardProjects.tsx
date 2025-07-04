@@ -21,22 +21,19 @@ export function CardProjects() {
 
       <CardContent className="p-0 flex-grow">
         <div className="relative w-full h-[300px] rounded-2xl overflow-hidden">
-          <Link href={project.link} target="_blank">
-            <Image
-              src={project.imageUrl}
-              alt={project.name}
-              fill
-              className="object-cover"
-            />
-          </Link>
+          <Image
+            src={project.imageUrl}
+            alt={project.name}
+            fill
+            className="object-cover"
+          />
         </div>
-        <CardDescription className="mt-4 text-justify text-sm px-2">
-          {project.description}
+        <CardDescription className="mt-3 px-2 text-sm text-justify line-clamp-4">
+          <p>{project.description}</p>
         </CardDescription>
       </CardContent>
-
       <CardFooter className="ml-auto">
-        <div className="">
+        <div className="mb-3">
           <Button asChild className="">
             <Link href={project.link} target="_blank">
               Visitar projeto
