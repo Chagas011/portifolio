@@ -8,18 +8,12 @@ export interface IProject {
 export const projects: IProject[] = [
   {
     name: "Projeto Ecommerce Fullstack — Next.js + Drizzle + NeonDB + Stripe",
-    imageUrl: "/ecommerce.png",
+    imageUrl: "/eccomerce.png",
     description: `Desenvolvi uma plataforma ecommerce moderna e escalável utilizando Next.js com TypeScript, focada em performance, experiência do usuário e segurança.
 
 O backend é estruturado com Drizzle ORM para acesso eficiente ao banco de dados PostgreSQL hospedado no NeonDB, garantindo alta disponibilidade e escalabilidade.
 
-Na camada frontend, utilizei Tailwind CSS para estilização responsiva e customizável, garantindo um design limpo e funcional em todos os dispositivos.
-
-A experiência do usuário foi aprimorada com formulários gerenciados por React Hook Form e validação robusta utilizando Zod, assegurando entrada de dados consistente e amigável.
-
-Implementei autenticação via Google OAuth, proporcionando login simples e seguro.
-
-Para o processamento de pagamentos, integrei o Stripe, permitindo transações seguras e flexíveis.`,
+Na camada frontend, utilizei Tailwind CSS para estilização responsiva e customizável, garantindo um design limpo e funcional em todos os dispositivos.`,
 
     link: "https://ecommerce-bootcamp-five.vercel.app",
   },

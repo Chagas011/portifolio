@@ -1,33 +1,23 @@
 import Image from "next/image";
-import { Raleway, Inter } from "next/font/google";
-import { Card, CardHeader } from "@/components/ui/card";
+import { Lato, Bebas_Neue } from "next/font/google";
+
 import { SheetButton } from "./SheetButton";
 import { Button } from "@/components/ui/button";
 
-const ralewayFont = Raleway({
+const lato = Lato({
   subsets: ["latin"],
-  weight: "700",
+  weight: "400",
 });
 
-const interFont = Inter({
+const bebas = Bebas_Neue({
   subsets: ["latin"],
   weight: "400",
 });
 export function Header() {
   return (
-    <div className="p-2 mt-20">
-      <Card className="bg-animated-gradient">
-        <CardHeader className="">
-          <div className="flex gap-4 items-center justify-center">
-            <p className="font-semibold mt-2"> Olá, eu sou</p>
-            <h1 className={`text-3xl text-center ${ralewayFont.className}`}>
-              Washington Chagas
-            </h1>
-          </div>
-        </CardHeader>
-      </Card>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-3">
-        <div className="relative w-[300px] h-[300px] mt-6 rounded-full overflow-hidden mx-auto sm:w-[320px] sm:h-[320px] lg:w-[430px] lg:h-[430px]">
+    <div className="p-2 mt-25" id="sobre">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-y-3">
+        <div className="relative w-[320px] h-[320px] mt-6 rounded-3xl overflow-hidden mx-auto sm:w-[320px] sm:h-[420px] lg:w-[350px] lg:h-[500px]">
           <Image
             src="/foto.jpeg"
             alt="washington-chagas-foto"
@@ -37,28 +27,54 @@ export function Header() {
         </div>
 
         <div className="">
-          <p
-            className={`p-2 text-zinc-300 text-xl text-justify leading-relaxed ${interFont.className}`}
+          <h1
+            className={`${bebas.className} text-center text-4xl lg:text-5xl text-white`}
           >
-            Sou formado em Análise e Desenvolvimento de Sistemas e estou no 8°
-            semestre de Ciência da Computação. Busco minha primeira oportunidade
-            como desenvolvedor fullstack júnior ou estagiário. Tenho
-            conhecimentos em tecnologias como JavaScript, TypeScript, React,
-            Next.js, Node.js, NestJS, HTML, CSS, Tailwind, Shadcn, PostgreSQL e
-            Docker. Ao longo da minha formação, venho desenvolvendo projetos que
-            colocam em prática tanto o lado técnico quanto a lógica de resolução
-            de problemas. Sou proativo, curioso e tenho muita vontade de
-            aprender e evoluir dentro da área. Acredito que com dedicação e
-            consistência posso agregar valor a equipe e projetos.
+            Sobre mim
+          </h1>
+          <p
+            className={`p-2 text-zinc-300 text-xl text-justify leading-relaxed ${lato.className}`}
+          >
+            Sou formado em{" "}
+            <strong>Análise e Desenvolvimento de Sistemas</strong> e em{" "}
+            <strong>Ciência da Computação</strong>, e busco minha primeira
+            oportunidade como <strong>Desenvolvedor Full Stack Júnior</strong>.
+            Tenho experiência em{" "}
+            <strong>projetos freelancers e acadêmicos</strong> e com{" "}
+            <span className="text-indigo-400 font-semibold">JavaScript</span>,{" "}
+            <span className="text-indigo-400 font-semibold">TypeScript</span>,{" "}
+            <span className="text-indigo-400 font-semibold">React</span>,{" "}
+            <span className="text-indigo-400 font-semibold">Next.js</span>,{" "}
+            <span className="text-indigo-400 font-semibold">Node.js</span>,{" "}
+            <span className="text-indigo-400 font-semibold">NestJS</span>,{" "}
+            <span className="text-indigo-400 font-semibold">HTML</span>,{" "}
+            <span className="text-indigo-400 font-semibold">CSS</span>,{" "}
+            <span className="text-indigo-400 font-semibold">Tailwind</span>,{" "}
+            <span className="text-indigo-400 font-semibold">Shadcn</span>,{" "}
+            <span className="text-indigo-400 font-semibold">PostgreSQL</span> e{" "}
+            <span className="text-indigo-400 font-semibold">Docker</span>, além
+            de conhecimentos em{" "}
+            <span className="text-purple-400 font-semibold">AWS</span>,{" "}
+            <span className="text-purple-400 font-semibold">Kubernetes</span>,{" "}
+            <span className="text-purple-400 font-semibold">Linux</span>,{" "}
+            <span className="text-purple-400 font-semibold">CI/CD</span> e{" "}
+            <span className="text-purple-400 font-semibold">
+              Inteligência Artificial (IA)
+            </span>
+            . Ao longo da minha formação, desenvolvi projetos que combinam
+            habilidades técnicas, lógica de programação e resolução de
+            problemas, sempre aplicando boas práticas. Sou proativo, curioso e
+            dedicado, com grande vontade de aprender e evoluir na área de
+            desenvolvimento, contribuindo com valor para equipes e projetos.
           </p>
+          <div className="flex justify-center mt-4">
+            <SheetButton>
+              <Button className="p-5 py-6">
+                <p className="text-xl p-3">Entre em contato</p>
+              </Button>
+            </SheetButton>
+          </div>
         </div>
-      </div>
-      <div className="flex justify-center mt-4">
-        <SheetButton>
-          <Button className="p-5 py-6">
-            <p className="text-xl p-3">Entre em contato</p>
-          </Button>
-        </SheetButton>
       </div>
     </div>
   );

@@ -55,12 +55,6 @@
   }
 }
 
-.gradient-animated {
-  background: linear-gradient(270deg, #4ade80, #22c55e, #14532d);
-  background-size: 600% 600%;
-  animation: gradientLoop 8s ease infinite;
-}
-
 :root {
   --radius: 0.65rem;
   --background: oklch(1 0 0);
@@ -69,7 +63,7 @@
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: oklch(0.606 0.25 292.717);
+  --primary: #2239d3;
   --primary-foreground: oklch(0.969 0.016 293.756);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
@@ -97,15 +91,15 @@
 }
 
 .dark {
-  --background: oklch(0.141 0.005 285.823);
+  --background: #010b28;
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.21 0.006 285.885);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.541 0.281 293.009);
+  --primary: #0433ab;
   --primary-foreground: oklch(0.969 0.016 293.756);
-  --secondary: oklch(0.274 0.006 286.033);
+  --secondary: #3d6af1;
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.274 0.006 286.033);
   --muted-foreground: oklch(0.705 0.015 286.067);
@@ -140,20 +134,9 @@
     background-position: 0% 50%;
   }
 }
-
-.bg-animated-gradient {
-  background: linear-gradient(
-    270deg,
-    oklch(0.541 0.281 293.009),
-    oklch(0.627 0.265 303.9)
-  );
-  background-size: 600% 600%;
-  animation: animatedGradient 10s ease infinite;
-  color: white;
-  border-radius: 0.75rem; /* rounded-xl */
-  transition: all 1s;
+html {
+  scroll-behavior: smooth;
 }
-
 @layer base {
   * {
     @apply border-border outline-ring/50;

@@ -8,7 +8,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 export function CardContact() {
   return (
-    <Card className="mt-30">
+    <Card className="mt-55 bg-[#191f52]">
       <CardContent className="">
         <div className="space-y-5">
           <div className="items-center flex gap-2">

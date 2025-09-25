@@ -10,9 +10,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { FolderKanbanIcon, HomeIcon } from "lucide-react";
 import { CardContact } from "./CardContact";
-import Link from "next/link";
+
 import { ReactNode } from "react";
 
 interface SheetButtonProps {
@@ -27,22 +26,7 @@ export function SheetButton({ children }: SheetButtonProps) {
         <SheetHeader className="mt-3 py-5">
           <SheetTitle>Entre em contato</SheetTitle>
         </SheetHeader>
-        <div className="mt-8 space-y-3">
-          <SheetClose asChild>
-            <Button variant="secondary" className="w-full" asChild>
-              <Link href="/">
-                <HomeIcon />
-                <p className="text-md font-bold">Pagina Inicial</p>
-              </Link>
-            </Button>
-          </SheetClose>
-          <Button variant="default" className="w-full" asChild>
-            <Link href="/projects">
-              <FolderKanbanIcon />
-              <p className="text-md font-bold">Projetos</p>
-            </Link>
-          </Button>
-        </div>
+
         <CardContact />
         <SheetFooter>
           <SheetClose asChild>
