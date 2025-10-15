@@ -32,6 +32,16 @@ Na camada frontend, utilizei Tailwind CSS para estilização responsiva e custom
     `,
     link: "https://app-barber-delta.vercel.app",
   },
+  {
+    name: "Ficheck",
+    imageUrl: "/fincheck2.png",
+    description: `
+        Sistema completo de controle financeiro desenvolvido com NestJS no back-end e React (Vite) 
+        no front-end. Possui autenticação de usuários via JWT e está totalmente hospedado na AWS, garantindo escalabilidade, segurança e alta disponibilidade. Ideal para gerenciamento de finanças pessoais ou empresariais.
+    
+    `,
+    link: "http://my-nest-app-frontend.s3-website-us-east-1.amazonaws.com",
+  },
 
   {
     name: "React Table Project",
