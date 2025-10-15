@@ -33,7 +33,7 @@ Na camada frontend, utilizei Tailwind CSS para estilização responsiva e custom
     link: "https://app-barber-delta.vercel.app",
   },
   {
-    name: "Ficheck",
+    name: "Fincheck - Controle financeiro",
     imageUrl: "/fincheck2.png",
     description: `
         Sistema completo de controle financeiro desenvolvido com NestJS no back-end e React (Vite) 
